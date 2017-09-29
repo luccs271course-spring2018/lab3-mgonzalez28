@@ -44,21 +44,21 @@ public class TestIterator {
     list.add(77);
     list.add(66);
     final Iterator<Integer> i = list.iterator();
-    assertTrue(i.hasNext());
+    assertTrue(i.hasNext()); //checks if iteration has more elements
     assertEquals(33, i.next().intValue());
-    // TODO fix the expected values in the assertions below
+    // DONE fix the expected values in the assertions below
     assertTrue(i.hasNext());
-    assertEquals(0, i.next().intValue());
+    assertEquals(77, i.next().intValue());
     assertTrue(i.hasNext());
-    assertEquals(0, i.next().intValue());
+    assertEquals(44, i.next().intValue());
     assertTrue(i.hasNext());
-    assertEquals(0, i.next().intValue());
+    assertEquals(77, i.next().intValue());
     assertTrue(i.hasNext());
-    assertEquals(0, i.next().intValue());
+    assertEquals(55, i.next().intValue());
     assertTrue(i.hasNext());
-    assertEquals(0, i.next().intValue());
+    assertEquals(77, i.next().intValue());
     assertTrue(i.hasNext());
-    assertEquals(0, i.next().intValue());
+    assertEquals(66, i.next().intValue());
     assertFalse(i.hasNext());
   }
 

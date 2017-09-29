@@ -14,11 +14,14 @@ import org.junit.Test;
 public class TestList {
 
   private List<Integer> list;
+  private LinkedList<Integer> linked;
 
   @Before
   public void setUp() throws Exception {
     list = new ArrayList<Integer>();
-    // TODO also try with a LinkedList - does it make any difference?
+    // (ADDED) TODO also try with a LinkedList - does it make any difference?
+    linked = new LinkedList<Integer>();
+    
   }
 
   @After
@@ -41,15 +44,16 @@ public class TestList {
   public void testSizeNonEmpty() {
     // TODO fix the expected values in the assertions below
     list.add(77);
-    assertEquals(true, list.isEmpty());
-    assertEquals(0, list.size());
-    assertEquals(0, list.get(0).intValue());
+    assertEquals(false, list.isEmpty()); // BEFORE assertEquals(true, list.isEmpty());
+    assertEquals(1, list.size()); // BEFORE assertEquals(0, list.size());
+    assertEquals(77, list.get(0).intValue());
   }
 
   @Test
   public void testContains() {
     // TODO write assertions using
     // list.contains(77)
+    assertTrue(true, list.contains(77); //ADDED
     // that hold before and after adding 77 to the list
     fail("Not yet implemented"); // remove this line when done
   }
@@ -60,10 +64,10 @@ public class TestList {
     list.add(77);
     list.add(77);
     // TODO fix the expected values in the assertions below
-    assertEquals(0, list.size());
+    assertEquals(4, list.size()); // BEFORE assertEquals(0, list.size());
     assertEquals(0, list.indexOf(77));
-    assertEquals(0, list.get(1).intValue());
-    assertEquals(0, list.lastIndexOf(77));
+    assertEquals(77, list.get(1).intValue()) // BEFORE assertEquals(0, list.get(1).intValue());
+    assertEquals(3, list.lastIndexOf(77)) // BEFORE assertEquals(0, list.lastIndexOf(77));
   }
 
   @Test
