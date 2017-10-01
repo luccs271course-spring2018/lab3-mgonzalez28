@@ -3,7 +3,6 @@ package cs271.lab.list;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
 
 import java.util.*;
 import org.junit.After;
@@ -73,7 +72,7 @@ public class TestIterator {
     final Iterator<Integer> i = list.iterator();
     while (i.hasNext()) {
       if (i.next() == 77) {
-       i.remove();
+        i.remove();
         //i.remove(77);  //TODO what happens if you use list.remove(77)?
       }
     }
@@ -99,8 +98,8 @@ public class TestIterator {
     // (defined as the sum of the items divided by the number of items)
     // testNonempty shows how to use an iterator; use i.hasNext() in the while loop condition
     final Iterator<Integer> i = list.iterator();
-    
-    while(i.hasNext()) {
+
+    while (i.hasNext()) {
       sum += i.next();
       n += 1;
     }
