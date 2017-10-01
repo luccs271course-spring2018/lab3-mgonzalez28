@@ -1,8 +1,6 @@
 package cs271.lab.list;
 
-import static org.junit.Assert.*;//assertEquals;
-//import static org.junit.Assert.assertTrue;
-//import static org.junit.Assert.fail;
+import static org.junit.Assert.*;
 
 import java.util.*;
 import org.junit.After;
@@ -16,7 +14,7 @@ public class TestList {
   @Before
   public void setUp() throws Exception {
     list = new ArrayList<Integer>();
-    // (ADDED) TODO also try with a LinkedList - does it make any difference?
+    //TODO also try with a LinkedList - does it make any difference?
     //linked = new LinkedList<Integer>();
     
   }
@@ -119,7 +117,7 @@ public class TestList {
     list.add(55);
     list.add(77);
     list.add(66);
-    // TODO using containsAll and Arrays.asList (see above),
+    // DONE using containsAll and Arrays.asList (see above),
     // 1) assert that list contains all five different numbers added
     // 2) assert that list does not contain all of 11, 22, and 33
     assertTrue(list.containsAll(Arrays.asList(33, 77, 44, 55, 66)));
