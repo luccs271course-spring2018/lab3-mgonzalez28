@@ -5,9 +5,7 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -21,6 +19,7 @@ public class TestIterator {
   public void setUp() throws Exception {
     list = new ArrayList<Integer>();
     // TODO also try with a LinkedList - does it make any difference?
+    //list = new LinkedList<Integer>();
   }
 
   @After
@@ -74,14 +73,15 @@ public class TestIterator {
     final Iterator<Integer> i = list.iterator();
     while (i.hasNext()) {
       if (i.next() == 77) {
-        i.remove(); // TODO what happens if you use list.remove(77)?
+       i.remove();
+        //i.remove(77);  //TODO what happens if you use list.remove(77)?
       }
     }
-    assertEquals(Arrays.asList(33, 44, 55,66), list);
-    // TODO using assertEquals and Arrays.asList, express which values are left in the list
+    // DONE using assertEquals and Arrays.asList, express which values are left in the list
     // See TestList.java for examples of how to use Arrays.asList; also see the Java Arrays
     // class for more information
-    fail("Not yet implemented"); // remove this line when done
+    assertEquals(4, list.size());
+    assertEquals(Arrays.asList(33, 44, 55, 66), list);
   }
 
   @Test
