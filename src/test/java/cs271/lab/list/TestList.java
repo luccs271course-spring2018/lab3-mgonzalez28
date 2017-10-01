@@ -130,6 +130,7 @@ public class TestList {
     // add items to the list to make the following assertions pass
     // (without touching the assertions themselves)
     list.addAll(Arrays.asList(33, 77, 44, 77, 55, 77, 66));
+    
     assertEquals(7, list.size());
     assertEquals(33, list.get(0).intValue());
     assertEquals(77, list.get(1).intValue());
