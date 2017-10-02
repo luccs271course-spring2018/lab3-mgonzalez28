@@ -17,6 +17,8 @@ public class TestPerformance {
   private final int SIZE = 10;
   // TODO choose this value in such a way that you can observe an actual effect
   // for increasing problem sizes
+  //TODO CREATE CHART FOR TESTS ON GOOGLE AND MAKE VISIBLE TO ANYONE WITH 
+  //LINK AND SUBMIT WITH SAKAI LAB 3 SUBMISSION
   private final int REPS = 1000000;
 
   private List<Integer> arrayList;
