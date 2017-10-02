@@ -1,6 +1,6 @@
 # TestIterator
 * Also try with a LinkedList - does it make any difference?
-  - Using a LinkedList makes no difference. All test pass successfully.
+  - Using a LinkedList makes no difference. All tests pass successfully.
 
 * What happens if you use *list.remove(77)*?
   - Using list.remove(77) gives an error as it looks for the value at index 77 when the max index of the list is 6.
