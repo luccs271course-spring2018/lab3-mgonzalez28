@@ -18,3 +18,4 @@
 # TestPerformance
 * Which of the two lists performs better as the size increases?
   - As the size increases the LinkedList takes a longer time finish.
+  https://docs.google.com/spreadsheets/d/1XIKswBFz3mWVGGav_2I9Wyivh3S0fHdWoy5JBOMdiXU/edit#gid=0
